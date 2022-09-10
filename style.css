@@ -1,0 +1,255 @@
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+body {
+  overscroll-behavior: none;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.scene {
+  overscroll-behavior: none;
+  width: 250vw;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.screen {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.half-screen {
+  width: 50vw;
+  background-color: aquamarine;
+  border: 1px solid black;
+}
+
+.second-plan {
+  position: absolute;
+  top: -10px;
+}
+
+.premier-plan {
+  position: absolute;
+  bottom: -20px;
+  pointer-events:none
+}
+
+.sky > * {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: 10vw;
+}
+
+.sky > *:nth-child(1) {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 10vw;
+}
+
+.vehicules {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  pointer-events:none
+}
+
+.vehicules > * {
+  position: fixed;
+  left: -10vw;
+}
+
+.train{
+  transform: translateY(55vh);
+  width: 50rem;
+  left: -20vw;
+}
+.bus {
+  transform: translateY(58vh);
+  width: 30rem;
+}
+.car {
+  width: 25rem;
+  transform: translateY(75vh);
+  position: fixed;
+  left: -10vw;
+  z-index: 999;
+}
+.cara {
+  position: fixed;
+  width: 25rem;
+  transform: translateY(65vh);
+  left: -10vw;
+  z-index: 2;
+}
+
+.sheeps {
+  display: flex;
+  width: fit-content;
+  top: 55%;
+  position: absolute;
+  left: 53%;
+  z-index: 9999;
+}
+
+.sheeps > img {
+  width: 100px;
+  height: 100%;
+  object-fit: contain;
+  margin: 0 2rem;
+}
+
+.pin {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+
+.pin:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+.modal {
+  position: absolute;
+  top: calc(50% - 300px);
+  left: calc(50% - 300px);
+  width: 600px;
+  min-height: 400px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #084459;
+  padding: 4rem;
+  z-index: 999;
+  display: none;
+  visibility: hidden;
+  border-radius: .5rem;
+  color: #084459;
+}
+
+.modal h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.show {
+  display: block;
+  visibility: visible;
+}
+
+.modal .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: #084459;
+  color: white;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dernier-plan {
+  height: fit-content;
+  position: fixed;
+  z-index: -999;
+  right: -60rem;
+  top: 20px;
+}
+
+.tree {
+  position: absolute;
+  bottom: -10px;
+  left: 30%;
+  width: 300px;
+  z-index: 999;
+  object-fit: contain;
+}
+
+.text {
+  position: absolute;
+  left: 15%;
+  top: 5%;
+}
+
+.text h1 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.textb {
+  position: absolute;
+  left: 55%;
+  top: 5%;
+}
